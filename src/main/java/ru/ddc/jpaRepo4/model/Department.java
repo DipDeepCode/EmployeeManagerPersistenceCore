@@ -26,7 +26,24 @@ public class Department {
     private String name;
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+    @OneToMany(
+            mappedBy = "department",
+            fetch = FetchType.EAGER
+    )
     private List<Vacancy> vacancies = new ArrayList<>();
 
+    public void addVacancy(Vacancy vacancy) {
+        if (vacancies == null) {
+            vacancies = new ArrayList<>();
+        }
+        vacancies.add(vacancy);
+        vacancy.setDepartment(this);
+    }
+
+    public void removeVacancy(Vacancy vacancy) {
+        if (vacancies != null) {
+            vacancies.remove(vacancy);
+            vacancy.setDepartment(null);
+        }
+    }
 }

@@ -7,6 +7,7 @@ INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_1', 'ln_1', '
 INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_2', 'ln_2', 'pn_2')
 INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_3', 'ln_3', 'pn_3')
 INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_4', 'ln_4', 'pn_4')
+INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_5', 'ln_5', 'pn_5')
 
 INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_1', 1, 1)
 INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_2', 1, 2)
