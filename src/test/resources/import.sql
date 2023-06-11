@@ -1,0 +1,16 @@
+INSERT INTO department (number, name) VALUES ('number_1', 'department_1')
+INSERT INTO department (number, name) VALUES ('number_2', 'department_2')
+INSERT INTO department (number, name) VALUES ('number_3', 'department_3')
+INSERT INTO department (number, name) VALUES ('number_4', 'department_4')
+
+INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_1', 'ln_1', 'pn_1')
+INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_2', 'ln_2', 'pn_2')
+INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_3', 'ln_3', 'pn_3')
+INSERT INTO employee (firstname, lastname, patronymic) VALUES ('fn_4', 'ln_4', 'pn_4')
+
+INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_1', 1, 1)
+INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_2', 1, 2)
+INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_3', 1, 3)
+INSERT INTO vacancy (position, department_id, employee_id) VALUES ('position_4', 2, 4)
+INSERT INTO vacancy (position, department_id) VALUES ('position_5', 2)
+INSERT INTO vacancy (position, department_id) VALUES ('position_6', 3)
