@@ -16,8 +16,11 @@ public class Vacancy {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "position", length = 64)
+    @Column(name = "position", length = 64, nullable = false)
     private String position;
+
+    @Column(name = "salary", nullable = false)
+    private Float salary;
 
     @ToString.Exclude
     @ManyToOne
@@ -25,7 +28,7 @@ public class Vacancy {
     private Department department;
 
     @ToString.Exclude
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_personnel_number")
     private Employee employee;
 

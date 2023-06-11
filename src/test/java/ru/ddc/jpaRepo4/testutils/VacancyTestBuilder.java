@@ -12,6 +12,7 @@ import ru.ddc.jpaRepo4.persistence.model.Vacancy;
 @With
 public class VacancyTestBuilder implements TestBuilder<Vacancy> {
     private String position = "position";
+    private float salary = 100;
     private Department department = null;
     private Employee employee = null;
 
@@ -19,6 +20,7 @@ public class VacancyTestBuilder implements TestBuilder<Vacancy> {
     public Vacancy build() {
         Vacancy vacancy = new Vacancy();
         vacancy.setPosition(position);
+        vacancy.setSalary(salary);
         vacancy.setDepartment(department);
         vacancy.setEmployee(employee);
         return vacancy;

@@ -19,20 +19,23 @@ public class Department {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "number")
+    @Column(name = "number", length = 32, nullable = false, unique = true)
     private String number;
 
-    @Column(name = "name", length = 64)
+    @Column(name = "name", length = 64, nullable = false, unique = true)
     private String name;
 
     @ToString.Exclude
-    @OneToMany(
-            mappedBy = "department",
-            fetch = FetchType.EAGER
-    )
+    @OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
     private List<Vacancy> vacancies = new ArrayList<>();
 
     public void addVacancy(Vacancy vacancy) {
+        if (vacancy == null) {
+            throw new NullPointerException("Error add vacancy. Vacancy is null");
+        }
+        if (vacancy.getDepartment() != null) {
+            throw new IllegalStateException("Vacancy already assigned to an Department");
+        }
         if (vacancies == null) {
             vacancies = new ArrayList<>();
         }
@@ -41,6 +44,12 @@ public class Department {
     }
 
     public void removeVacancy(Vacancy vacancy) {
+        if (vacancy == null) {
+            throw new NullPointerException("Error remove vacancy. Vacancy is null");
+        }
+        if (vacancy.getDepartment() == null) {
+            throw new IllegalStateException("Vacancy already removed");
+        }
         if (vacancies != null) {
             vacancies.remove(vacancy);
             vacancy.setDepartment(null);
