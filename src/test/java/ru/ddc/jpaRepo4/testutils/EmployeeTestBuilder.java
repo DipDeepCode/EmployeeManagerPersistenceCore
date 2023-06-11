@@ -3,8 +3,8 @@ package ru.ddc.jpaRepo4.testutils;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.With;
-import ru.ddc.jpaRepo4.model.Employee;
-import ru.ddc.jpaRepo4.model.Vacancy;
+import ru.ddc.jpaRepo4.persistence.model.Employee;
+import ru.ddc.jpaRepo4.persistence.model.Vacancy;
 
 @AllArgsConstructor
 @NoArgsConstructor(staticName = "aEmployee")

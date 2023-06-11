@@ -1,9 +1,9 @@
-package ru.ddc.jpaRepo4.dao;
+package ru.ddc.jpaRepo4.persistence.dao;
 
 import jakarta.annotation.Nonnull;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.ddc.jpaRepo4.model.Employee;
+import ru.ddc.jpaRepo4.persistence.model.Employee;
 
 import java.util.List;
 import java.util.Optional;

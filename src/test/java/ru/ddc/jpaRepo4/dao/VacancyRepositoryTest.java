@@ -4,8 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.dao.DataIntegrityViolationException;
-import ru.ddc.jpaRepo4.model.Department;
-import ru.ddc.jpaRepo4.model.Vacancy;
+import ru.ddc.jpaRepo4.persistence.model.Department;
+import ru.ddc.jpaRepo4.persistence.model.Vacancy;
+import ru.ddc.jpaRepo4.persistence.dao.DepartmentRepository;
+import ru.ddc.jpaRepo4.persistence.dao.VacancyRepository;
 
 import static ru.ddc.jpaRepo4.testutils.VacancyTestBuilder.*;
 

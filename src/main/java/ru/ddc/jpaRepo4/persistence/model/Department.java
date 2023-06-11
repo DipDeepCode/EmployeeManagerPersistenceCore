@@ -1,4 +1,4 @@
-package ru.ddc.jpaRepo4.model;
+package ru.ddc.jpaRepo4.persistence.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

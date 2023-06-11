@@ -1,8 +1,8 @@
-package ru.ddc.jpaRepo4.dao;
+package ru.ddc.jpaRepo4.persistence.dao;
 
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
-import ru.ddc.jpaRepo4.model.Department;
+import ru.ddc.jpaRepo4.persistence.model.Department;
 
 import java.util.List;
 

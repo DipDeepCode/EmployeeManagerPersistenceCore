@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.dao.DataIntegrityViolationException;
-import ru.ddc.jpaRepo4.model.Employee;
+import ru.ddc.jpaRepo4.persistence.model.Employee;
+import ru.ddc.jpaRepo4.persistence.dao.EmployeeRepository;
 
 import static ru.ddc.jpaRepo4.testutils.EmployeeTestBuilder.*;
 import static org.junit.jupiter.api.Assertions.*;

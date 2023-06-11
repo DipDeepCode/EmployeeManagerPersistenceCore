@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.ddc</groupId>
-	<artifactId>jpaRepo4</artifactId>
+	<artifactId>em-persistence-core</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jpaRepo4</name>
-	<description>Demo project for Spring Boot</description>
+	<name>em-persistence-core</name>
+	<description>Persistence core fore Employee Manager</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
