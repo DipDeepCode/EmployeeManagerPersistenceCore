@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.With;
 import ru.ddc.jpaRepo4.model.Department;
 import ru.ddc.jpaRepo4.model.Vacancy;
-import ru.ddc.jpaRepo4.testutils.TestBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
