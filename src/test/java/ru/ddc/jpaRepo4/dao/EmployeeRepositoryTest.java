@@ -25,11 +25,11 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    public void whenFindEmployeeById_thenEmployeeIdEqualsToSpecified() {
-        Long employeeId = 1L;
-        Employee employee = employeeRepository.findById(employeeId).orElseThrow();
+    public void whenFindEmployeeById_thenEmployeePersonnelNumberEqualsToSpecified() {
+        Long employeePersonnelNumber = 1L;
+        Employee employee = employeeRepository.findById(employeePersonnelNumber).orElseThrow();
         showEmployee(employee);
-        assertEquals(employeeId, employee.getId());
+        assertEquals(employeePersonnelNumber, employee.getPersonnelNumber());
     }
 
     @Test
@@ -51,18 +51,18 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void whenDeleteEmployeeByIdWithVacancy_thenThrowException() {
-        Long employeeId = 1L;
-        Employee employee = employeeRepository.findById(employeeId).orElseThrow();
-        employeeRepository.deleteById(employee.getId());
+        Long employeePersonnelNumber = 1L;
+        Employee employee = employeeRepository.findById(employeePersonnelNumber).orElseThrow();
+        employeeRepository.deleteById(employee.getPersonnelNumber());
         assertThrows(DataIntegrityViolationException.class, () -> employeeRepository.flush());
     }
 
     @Test
     public void whenDeleteEmployeeByIdWithoutVacancy_thenEmployeeCounterLessByOne() {
-        Long employeeId = 5L;
+        Long employeePersonnelNumber = 5L;
         long counterBeforeDelete = employeeRepository.count();
-        Employee employee = employeeRepository.findById(employeeId).orElseThrow();
-        employeeRepository.deleteById(employee.getId());
+        Employee employee = employeeRepository.findById(employeePersonnelNumber).orElseThrow();
+        employeeRepository.deleteById(employee.getPersonnelNumber());
         employeeRepository.flush();
         long counterAfterDelete = employeeRepository.count();
         assertEquals(1, counterBeforeDelete - counterAfterDelete);

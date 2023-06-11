@@ -26,7 +26,7 @@ public class Vacancy {
 
     @ToString.Exclude
     @OneToOne
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "employee_personnel_number")
     private Employee employee;
 
 }
